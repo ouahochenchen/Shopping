@@ -7,46 +7,49 @@ import org.apache.http.HttpStatus;
 import java.util.HashMap;
 import java.util.Map;
 
-public class R extends HashMap<String, Object> {
+/**
+ * 统一返回处理器
+ */
+public class ResponseHandler extends HashMap<String, Object> {
     private static final long serialVersionUID = 1L;
 
-    public R() {
+    public ResponseHandler() {
         put("code", 0);
         put("msg", "success");
     }
 
-    public static R error() {
+    public static ResponseHandler error() {
         return error(HttpStatus.SC_INTERNAL_SERVER_ERROR, "未知异常，请联系管理员");
     }
 
-    public static R error(String msg) {
+    public static ResponseHandler error(String msg) {
         return error(HttpStatus.SC_INTERNAL_SERVER_ERROR, msg);
     }
 
-    public static R error(int code, String msg) {
-        R r = new R();
+    public static ResponseHandler error(int code, String msg) {
+        ResponseHandler r = new ResponseHandler();
         r.put("code", code);
         r.put("msg", msg);
         return r;
     }
 
-    public static R ok(String msg) {
-        R r = new R();
+    public static ResponseHandler ok(String msg) {
+        ResponseHandler r = new ResponseHandler();
         r.put("msg", msg);
         return r;
     }
 
-    public static R ok(Map<String, Object> map) {
-        R r = new R();
+    public static ResponseHandler ok(Map<String, Object> map) {
+        ResponseHandler r = new ResponseHandler();
         r.putAll(map);
         return r;
     }
 
-    public static R ok() {
-        return new R();
+    public static ResponseHandler ok() {
+        return new ResponseHandler();
     }
 
-    public R put(String key, Object value) {
+    public ResponseHandler put(String key, Object value) {
         super.put(key, value);
         return this;
     }

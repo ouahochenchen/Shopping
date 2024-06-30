@@ -1,4 +1,4 @@
-package com.chen.myshopping;
+package myshopping;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

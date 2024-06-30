@@ -1,6 +1,6 @@
-package com.chen.myshopping.controller;
+package myshopping.controller;
 
-import com.chen.myshopping.service.BrandService;
+import myshopping.service.BrandService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,7 +10,7 @@ public class brandController {
     @Autowired
     private BrandService brandService;
 
-    @RequestMapping("/t")
+    @RequestMapping("/c")
     public int count(){
         return brandService.count();
     }

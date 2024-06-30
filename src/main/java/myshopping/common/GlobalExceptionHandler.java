@@ -1,4 +1,4 @@
-package myshopping.config;
+package myshopping.common;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,7 +1,9 @@
-package com.chen.myshopping.entity;
+package myshopping.entity;
 
 import lombok.Data;
+//import org.springframework.data.relational.core.mapping.Table;
 
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -9,15 +11,17 @@ import java.io.Serializable;
  * @author JSON.CN
  * @date 2024-06-29
  */
+@Entity
 @Data
 public class Product implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-
     /**
      * id
      */
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     /**
@@ -69,12 +73,22 @@ public class Product implements Serializable {
      * 品牌ID
      */
     private Long brandId;
-
+    /**
+     * 品牌名
+     */
+    private String brandName;
+    /**
+     * 图片地址
+     */
+    private String imgUrl;
     /**
      * 分类ID
      */
     private Long categoryId;
-
+    /**
+     * 分类名称
+     */
+    private String categoryName;
     /**
      * 创建时间
      */
@@ -106,4 +120,13 @@ public class Product implements Serializable {
     private Double retailPrice;
 
     public Product() {}
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
 }

@@ -1,4 +1,4 @@
-package com.chen.myshopping.entity;
+package myshopping.entity;
 
 import lombok.Data;
 

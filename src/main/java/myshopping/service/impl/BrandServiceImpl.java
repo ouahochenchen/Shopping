@@ -1,7 +1,7 @@
-package com.chen.myshopping.service.impl;
+package myshopping.service.impl;
 
-import com.chen.myshopping.mapper.BrandMapper;
-import com.chen.myshopping.service.BrandService;
+import myshopping.mapper.BrandMapper;
+import myshopping.service.BrandService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

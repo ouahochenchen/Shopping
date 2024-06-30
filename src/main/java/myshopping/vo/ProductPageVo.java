@@ -6,7 +6,7 @@ import myshopping.entity.Product;
 import java.io.Serializable;
 import java.util.List;
 @Data
-public class ProductVo implements Serializable {
+public class ProductPageVo implements Serializable {
     private List<Product> productList;
     private Integer total;
 }

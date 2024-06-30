@@ -1,4 +1,4 @@
-package com.chen.myshopping.entity;
+package myshopping.entity;
 
 import lombok.Data;
 import org.springframework.data.relational.core.mapping.Table;
